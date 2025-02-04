@@ -35,15 +35,15 @@ export default function Home() {
               <span className={styles.subHeading}>Welcome to </span>Robomonk.ai
             </motion.h1>
             <h2 className={styles.subHeading}>
-              Gear Up for the Future! 🚀 Your Robotics & AI Journey Starts Soon!
+             {` Gear Up for the Future! 🚀 Your Robotics & AI Journey Starts Soon!`}
             </h2>
             <h2 className={styles.subHeading}>
-              🔧 We're Building Something Epic!
+             {` 🔧 We're Building Something Epic!`}
             </h2>
             <p className={styles.welcomeText}>
-              RoboMonk is crafting a next-gen learning platform where innovation
+              {`RoboMonk is crafting a next-gen learning platform where innovation
               meets education. Get ready to build, code, and create with
-              hands-on Robotics, AI, and STEM learning!
+              hands-on Robotics, AI, and STEM learning!`}
             </p>
           </div>
 
