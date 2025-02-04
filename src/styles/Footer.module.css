@@ -136,7 +136,7 @@
 /* iPhone SE, older Android phones */
 @media only screen and (max-width: 320px) {
   .footerMainContainer {
-    height: auto;
+    height: 62vh;
   }
 
   .footerHeading {
@@ -173,7 +173,7 @@
 /* iPhone 6/7/8, Galaxy S8 */
 @media only screen and (min-width: 321px) and (max-width: 375px) {
   .footerMainContainer {
-    height: auto;
+    height: 52vh;
   }
 
   .footerHeading {
@@ -210,7 +210,7 @@
 /* iPhone 11 Pro, Google Pixel 2 */
 @media only screen and (min-width: 376px) and (max-width: 425px) {
   .footerMainContainer {
-    height: auto;
+    height: 52vh;
   }
 
   .footerHeading {
