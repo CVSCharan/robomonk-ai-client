@@ -67,23 +67,23 @@ html {
 /* width */
 ::-webkit-scrollbar {
   width: 11px;
-  height: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: #aff2f2;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #575c66;
+  background-color: #4a9faf;
   border-radius: 20px;
+  border: 2px solid #73c7c7;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #626970;
+  background-color: #4a9faf;
 }
 
 ::-webkit-backdrop-filter {
