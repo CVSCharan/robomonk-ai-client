@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "../styles/Footer.module.css";
 import { Instagram } from "@mui/icons-material";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Image from "next/image";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className={styles.socialMediaIcons}>
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/robomonk.ai/?igsh=bnh1M2owOGRiOTRl#"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -39,23 +39,30 @@ const Footer = () => {
             <Instagram className={styles.icon} fontSize="large" />
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://wa.me/qr/K5ILKPFNLG76J1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <FacebookIcon className={styles.icon} fontSize="large" />
+            <WhatsAppIcon className={styles.icon} fontSize="large" />
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://www.threads.net/@robomonk.ai?invite=0"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
           >
-            <XIcon className={styles.icon} fontSize="large" />
+            <Image
+              src={"/images/threads-white-icon.png"}
+              alt={"Threads social media icon"}
+              height={100}
+              width={100}
+              priority
+              className={styles.icon}
+            />
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/robomonk-ai/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

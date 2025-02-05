@@ -41,6 +41,8 @@
   transition: transform 0.3s ease, color 0.3s ease;
   text-decoration: none;
   margin: 0 2rem;
+  max-height: 25px;
+  max-width: 25px;
 }
 
 .logoImg {

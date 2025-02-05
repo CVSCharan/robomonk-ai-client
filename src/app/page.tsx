@@ -5,8 +5,33 @@ import Navbar from "@/sections/NavBar";
 import Footer from "@/sections/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    full_name: "",
+    occupation: "",
+    institution: "",
+    city: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+
+  // Snackbar State
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "success", // "success" or "error"
+  });
+
+  const handleSnackbarClose = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
   const headingVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -17,6 +42,74 @@ export default function Home() {
         ease: "easeInOut",
       },
     },
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Ensure environment variables are defined, otherwise throw an error
+    const service_id = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID;
+    const template_id = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID;
+    const public_key = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
+
+    if (!service_id || !template_id || !public_key) {
+      console.error("Missing EmailJS environment variables.");
+      setSnackbar({
+        open: true,
+        message: "Configuration error. Please try again later.",
+        severity: "error",
+      });
+      return;
+    }
+
+    emailjs
+      .send(
+        service_id, // Service ID
+        template_id, // Template ID
+        {
+          full_name: formData.full_name,
+          occupation: formData.occupation,
+          institution: formData.institution,
+          city: formData.city,
+          email: formData.email,
+          mobile: formData.mobile,
+          message: formData.message,
+        },
+        public_key // Public Key
+      )
+      .then(
+        (response) => {
+          console.log(response.text);
+          setSnackbar({
+            open: true,
+            message: "Email sent successfully!",
+            severity: "success",
+          });
+          setFormData({
+            full_name: "",
+            occupation: "",
+            institution: "",
+            city: "",
+            email: "",
+            mobile: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("Error:", error);
+          setSnackbar({
+            open: true,
+            message: "Failed to send email. Please try again.",
+            severity: "error",
+          });
+        }
+      );
   };
 
   return (
@@ -35,10 +128,10 @@ export default function Home() {
               <span className={styles.subHeading}>Welcome to </span>Robomonk.ai
             </motion.h1>
             <h2 className={styles.subHeading}>
-             {` Gear Up for the Future! 🚀 Your Robotics & AI Journey Starts Soon!`}
+              {` Gear Up for the Future! 🚀 Your Robotics & AI Journey Starts Soon!`}
             </h2>
             <h2 className={styles.subHeading}>
-             {` 🔧 We're Building Something Epic!`}
+              {` 🔧 We're Building Something Epic!`}
             </h2>
             <p className={styles.welcomeText}>
               {`RoboMonk is crafting a next-gen learning platform where innovation
@@ -125,16 +218,62 @@ export default function Home() {
             </div>
           </div>
 
-          <form id="Contact-Us-Section" className={styles.formSection}>
+          <form
+            id="Contact-Us-Section"
+            onSubmit={handleSubmit}
+            className={styles.formSection}
+          >
             <h2 className={styles.heading}>🚀 Join the Waitlist</h2>
             <div className={styles.formContainer}>
-              <input type="text" placeholder="Full Name" />
-              <input type="text" placeholder="Occupation" />
-              <input type="text" placeholder="Institution" />
-              <input type="text" placeholder="City" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Mobile No." />
-              <textarea placeholder="Message" rows={4}></textarea>
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full Name"
+                value={formData.full_name}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="occupation"
+                placeholder="Occupation"
+                value={formData.occupation}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="institution"
+                placeholder="Institution"
+                value={formData.institution}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value={formData.city}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="mobile"
+                placeholder="Mobile No."
+                value={formData.mobile}
+                onChange={handleChange}
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
             </div>
             <motion.button
               initial="hidden"
@@ -150,6 +289,22 @@ export default function Home() {
         </div>
       </section>
       <Footer />
+
+      {/* Snackbar for Notifications */}
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={4000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity={snackbar.severity as "success" | "error"}
+          sx={{ width: "100%" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </main>
   );
 }
