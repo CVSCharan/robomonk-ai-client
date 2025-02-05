@@ -1,5 +1,5 @@
 .footerMainContainer {
-  height: 42vh;
+  height: 55vh;
   width: 100vw;
   background: linear-gradient(120deg, #40e0d0, #00b3b3, #008080);
   color: white;
@@ -138,7 +138,7 @@
 /* iPhone SE, older Android phones */
 @media only screen and (max-width: 320px) {
   .footerMainContainer {
-    height: 65vh;
+    height: 75vh;
   }
 
   .footerHeading {
@@ -175,7 +175,7 @@
 /* iPhone 6/7/8, Galaxy S8 */
 @media only screen and (min-width: 321px) and (max-width: 375px) {
   .footerMainContainer {
-    height: 60vh;
+    height: 70vh;
   }
 
   .footerHeading {
@@ -212,7 +212,7 @@
 /* iPhone 11 Pro, Google Pixel 2 */
 @media only screen and (min-width: 376px) and (max-width: 425px) {
   .footerMainContainer {
-    height: 60vh;
+    height: 70vh;
   }
 
   .footerHeading {

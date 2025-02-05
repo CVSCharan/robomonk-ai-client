@@ -91,7 +91,16 @@ const Footer = () => {
         </Link>
       </div> */}
       <h2 className={styles.footerTxt}>
-        📞 Need Help? Contact us at{" "}
+        <strong> Need Help?</strong>
+      </h2>
+      <h2 className={styles.footerTxt}>
+        📞 Contact us at{" "}
+        <a href="tel:+91 9059715757" className={styles.footerSpan}>
+          +91 9059715757
+        </a>
+      </h2>
+      <h2 className={styles.footerTxt}>
+        📩 Email us at{" "}
         <span
           className={styles.footerSpan}
           onClick={() => (window.location.href = "mailto:info@robomonk.ai")}
@@ -100,7 +109,7 @@ const Footer = () => {
         </span>
       </h2>
       <h2 className={styles.footerTxt}>
-        © 2025 All rights reserved - Robomonk.AI
+        © 2025 All rights reserved - Robomonk Technologies Pvt. Ltd.
       </h2>
       <h3 className={styles.footerSubTxt}>Made with 💗 by CVS CHARAN</h3>
     </footer>
