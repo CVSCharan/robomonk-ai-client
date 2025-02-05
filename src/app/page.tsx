@@ -160,7 +160,7 @@ export default function Home() {
                 viewport={{ once: false, amount: 0.2 }}
                 className={styles.comingUpTxt}
               >
-                Fun & Interactive Robotics Challenges
+                AI & Robotics Lab setup
               </motion.h3>
               <motion.h3
                 initial="hidden"

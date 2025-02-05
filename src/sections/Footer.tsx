@@ -5,7 +5,6 @@ import styles from "../styles/Footer.module.css";
 import { Instagram } from "@mui/icons-material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Image from "next/image";
-import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
