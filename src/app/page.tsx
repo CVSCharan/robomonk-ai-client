@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <main className={styles.mainBody}>
+    <main className={styles.main}>
       <div className={styles.bodyWrapper}>
         <section className={styles.mainBody}>
           <div className={styles.landingSection}>
