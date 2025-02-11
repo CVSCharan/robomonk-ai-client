@@ -35,7 +35,7 @@
 
 /* ==== Background Section with Gradient & Clip-Path ==== */
 .bodyWrapper {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
   background: white;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -191,7 +191,7 @@
   }
 
   .footerContainer {
-    height: 15vh;
+    height: 25vh;
   }
 }
 
@@ -224,7 +224,7 @@
   }
 
   .footerContainer {
-    height: 15vh;
+    height: 25vh;
   }
 }
 
@@ -263,7 +263,7 @@
   }
 
   .footerContainer {
-    height: 15vh;
+    height: 25vh;
   }
 
   .footerHeading {
