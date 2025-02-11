@@ -18,9 +18,9 @@ export default function Home() {
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.bodyWrapper}>
-        <section className={styles.mainBody}>
+    <main>
+      <section className={styles.mainBody}>
+        <div className={styles.bodyWrapper}>
           <div className={styles.landingSection}>
             <Image
               src={"/images/robomonkai-logo-img.jpg"}
@@ -78,8 +78,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <footer className={styles.footerContainer}>
         <h2 className={styles.footerHeading}>
           © 2025 All rights reserved - Robomonk Technologies Pvt. Ltd.

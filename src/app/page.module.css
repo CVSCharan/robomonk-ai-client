@@ -5,7 +5,6 @@
   overflow-x: hidden;
   position: relative;
   background: #f9f9f9;
-  border-radius: 1rem;
 }
 
 /* ==== Landing Section ==== */
@@ -16,7 +15,7 @@
   margin: 0 auto;
   padding: 2rem;
   border-radius: 1rem;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +35,7 @@
 
 /* ==== Background Section with Gradient & Clip-Path ==== */
 .bodyWrapper {
-  padding-bottom: 150px;
+  padding-bottom: 120px;
   background: white;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -140,6 +139,7 @@
   text-align: center;
   padding: 1rem 0;
   height: 5.5rem;
+  background: #f9f9f9;
 }
 
 .footerHeading {
