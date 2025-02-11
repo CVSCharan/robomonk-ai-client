@@ -136,10 +136,15 @@
 /* ==== Footer Section ==== */
 .footerContainer {
   width: 100%;
-  text-align: center;
   padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
   height: 5.5rem;
   background: #f9f9f9;
+  text-align: center;
 }
 
 .footerHeading {
