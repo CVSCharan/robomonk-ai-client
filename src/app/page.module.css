@@ -38,7 +38,7 @@
   padding-bottom: 120px;
   background: white;
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 98%, 0 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -191,7 +191,7 @@
   }
 
   .footerContainer {
-    height: 25vh;
+    height: 15vh;
   }
 }
 
@@ -224,11 +224,13 @@
   }
 
   .footerContainer {
-    height: 25vh;
+    height: 15vh;
   }
 }
 
-@media (max-width: 480px) {
+/* Medium Mobile Devices (Portrait) */
+/* iPhone 11 Pro, Google Pixel 2 */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
   .landingSection {
     padding: 1rem;
     height: auto;
