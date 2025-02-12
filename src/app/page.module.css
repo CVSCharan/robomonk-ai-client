@@ -329,7 +329,7 @@
   }
 
   .card img {
-    height: 170px;
+    height: 160px;
   }
 
   .card h2 {
@@ -343,6 +343,7 @@
 
   .footerContainer {
     height: 20vh;
+    padding-bottom: 2rem;
   }
 
   .footerHeading {
