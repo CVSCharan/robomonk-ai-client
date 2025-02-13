@@ -1,0 +1,243 @@
+.mainBody {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  position: relative;
+  background: #f9f9f9;
+}
+
+.bodyWrapper {
+  padding-bottom: 100px;
+  background: white;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 98%, 0 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 245vh;
+}
+
+.bodyWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 240vh;
+  background: linear-gradient(
+    to bottom,
+    #f9f9f9 70%,
+    rgba(45, 156, 219, 0.7) 100%
+  );
+  clip-path: inherit;
+  z-index: -1;
+}
+
+.landingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  padding: 1rem;
+  position: relative; /* Ensure relative positioning for absolute children */
+  overflow: hidden; /* Prevents any extra parts from overflowing */
+}
+
+.landingContainer::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Adjust to move it fully into the corner */
+  left: -50px; /* Adjust to move it fully into the corner */
+  width: 120px; /* Diameter */
+  height: 120px; /* Diameter */
+  background: linear-gradient(135deg, #e0f7f7, #b3eae7); /* Gradient color */
+  border-top-left-radius: 70px; /* Quarter-circle effect */
+  border-bottom-right-radius: 70px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.landingLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.landingRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Makes it a reference for absolute positioning */
+}
+
+.landingBlob {
+  height: 350px;
+  width: 350px;
+  position: absolute; /* Positions the blob in the center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensures blob stays behind */
+}
+
+.studentHero {
+  height: 350px; /* Adjust size as needed */
+  width: auto;
+  position: absolute; /* Positions student image on top */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures student image stays on top */
+}
+
+.landingHeading {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.magicWord {
+  font-weight: bold;
+  display: inline-block;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.7rem;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.lidContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lidImg {
+  width: 480px;
+  height: 170px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lidHeading {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lidSpan {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.lidContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.lidTxt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+}
+
+.lidSubTxt {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+}
+
+.lidPointsTxt {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  padding-left: 1rem;
+}
+
+.lidPara {
+  padding: 2rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: center;
+}
+
+.emccContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+.emccHeading {
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.emccTxt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+}
+
+.emccSubTxt {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+}
+
+.emccContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+}
