@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MenuRounded } from "@mui/icons-material";
 import styles from "../styles/K12Nav.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const K12Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const K12Nav = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.navbarContainer}>
-        <a className={styles.navLogo} href="/">
+        <Link className={styles.navLogo} href="/">
           <Image
             src={"/images/robomonk-logo-img.webp"}
             alt={"NavBar Logo Img"}
@@ -20,67 +21,71 @@ const K12Nav = () => {
             priority
             className={styles.logoImg}
           />
-        </a>
+        </Link>
 
         <div className={styles.mobileIcon} onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </div>
 
         <div className={styles.navItems}>
-          <a className={styles.navLink} href="#About">
+          <Link className={styles.navLink} href="#About">
             Club & Activities
-          </a>
-          <a className={styles.navLink} href="#Skills">
+          </Link>
+          <Link className={styles.navLink} href="#Skills">
             Spark Events
-          </a>
-          <a className={styles.navLink} href="#Experience">
+          </Link>
+          <Link className={styles.navLink} href="#Experience">
             Bootcamps
-          </a>
-          <a className={styles.navLink} href="#Projects">
+          </Link>
+          <Link className={styles.navLink} href="#Projects">
             SciFi
-          </a>
+          </Link>
         </div>
 
         <div className={styles.btnContainer}>
-          <a className={styles.labSolBtn} href={"/"} target="_blank">
+          <Link className={styles.labSolBtn} href={"/"} target="_blank">
             Lab Solutions
-          </a>
+          </Link>
         </div>
 
         {isOpen && (
           <ul className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
-            <a
+            <Link
               className={styles.navLink}
               onClick={() => setIsOpen(!isOpen)}
               href="/"
             >
               Club & Activities
-            </a>
-            <a
+            </Link>
+            <Link
               className={styles.navLink}
               onClick={() => setIsOpen(!isOpen)}
               href="/"
             >
               Spark Events
-            </a>
-            <a
+            </Link>
+            <Link
               className={styles.navLink}
               onClick={() => setIsOpen(!isOpen)}
               href="/"
             >
               Bootcamps
-            </a>
-            <a
+            </Link>
+            <Link
               className={styles.navLink}
               onClick={() => setIsOpen(!isOpen)}
               href="/"
             >
               SciFi
-            </a>
+            </Link>
             <div className={styles.mobileBtnContainer}>
-              <a className={styles.mobileLabSolBtn} href={"/"} target="_blank">
+              <Link
+                className={styles.mobileLabSolBtn}
+                href={"/"}
+                target="_blank"
+              >
                 Lab Solutions
-              </a>
+              </Link>
             </div>
           </ul>
         )}
