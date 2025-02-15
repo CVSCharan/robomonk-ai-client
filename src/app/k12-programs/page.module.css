@@ -234,8 +234,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.emccInnerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 3rem;
+  max-width: 80rem;
 }
 
 .emccHeading {
@@ -245,7 +253,6 @@
   letter-spacing: 0.03rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  
 }
 
 .emccTxt {

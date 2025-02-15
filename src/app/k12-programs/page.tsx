@@ -190,52 +190,56 @@ const K12Programs = () => {
           </div>
         </div>
         <div className={styles.emccContainer}>
-          <h2 className={styles.emccHeading}>
-            EMCC Methodology – Our Approach to Learning
-          </h2>
-          <div className={styles.emccContent}>
-            <h2 className={styles.emccTxt}>Exploration & Play</h2>
-            <h3 className={styles.emccSubTxt}>
-              Encouraging curiosity-driven learning through hands-on
-              experiments, tinkering, and real-world problem-solving. Students
-              engage in open-ended exploration, fostering creativity and a deep
-              understanding of concepts.
-            </h3>
-          </div>
-          <div className={styles.emccContent}>
-            <h2 className={styles.emccTxt}>Multisensory Learning</h2>
-            <h3 className={styles.emccSubTxt}>
-              Integrating visual, auditory, and kinesthetic experiences to
-              enhance comprehension and retention. This approach makes learning
-              more engaging and accessible for diverse learners.
-            </h3>
-          </div>
-          <div className={styles.emccContent}>
-            <h2 className={styles.emccTxt}>Collaborative Inquiry</h2>
-            <h3 className={styles.emccSubTxt}>
-              Promoting teamwork and inquiry-based learning where students work
-              together to analyze problems, test hypotheses, and develop
-              innovative solutions through shared knowledge.
-            </h3>
-          </div>
-          <div className={styles.emccContent}>
-            <h2 className={styles.emccTxt}>Creative Expression & Innovation</h2>
-            <h3 className={styles.emccSubTxt}>
-              Encouraging students to think outside the box, design unique
-              solutions, and develop their own inventions. This empowers them to
-              become creators rather than just consumers of technology.
-            </h3>
-          </div>
-          <div className={styles.emccContent}>
-            <h2 className={styles.emccTxt}>
-              {" "}
-              Learn. Invent. Discover. (L.I.D)
+          <div className={styles.emccInnerContainer}>
+            <h2 className={styles.emccHeading}>
+              EMCC Methodology – Our Approach to Learning
             </h2>
-            <h3 className={styles.emccSubTxt}>
-              Our philosophy inspires students to continuously learn new skills,
-              invent groundbreaking solutions, and discover new possibilities,
-              preparing them for the future. 🚀
-            </h3>
+            <div className={styles.emccContent}>
+              <h2 className={styles.emccTxt}>Exploration & Play</h2>
+              <h3 className={styles.emccSubTxt}>
+                Encouraging curiosity-driven learning through hands-on
+                experiments, tinkering, and real-world problem-solving. Students
+                engage in open-ended exploration, fostering creativity and a
+                deep understanding of concepts.
+              </h3>
+            </div>
+            <div className={styles.emccContent}>
+              <h2 className={styles.emccTxt}>Multisensory Learning</h2>
+              <h3 className={styles.emccSubTxt}>
+                Integrating visual, auditory, and kinesthetic experiences to
+                enhance comprehension and retention. This approach makes
+                learning more engaging and accessible for diverse learners.
+              </h3>
+            </div>
+            <div className={styles.emccContent}>
+              <h2 className={styles.emccTxt}>Collaborative Inquiry</h2>
+              <h3 className={styles.emccSubTxt}>
+                Promoting teamwork and inquiry-based learning where students
+                work together to analyze problems, test hypotheses, and develop
+                innovative solutions through shared knowledge.
+              </h3>
+            </div>
+            <div className={styles.emccContent}>
+              <h2 className={styles.emccTxt}>
+                Creative Expression & Innovation
+              </h2>
+              <h3 className={styles.emccSubTxt}>
+                Encouraging students to think outside the box, design unique
+                solutions, and develop their own inventions. This empowers them
+                to become creators rather than just consumers of technology.
+              </h3>
+            </div>
+            <div className={styles.emccContent}>
+              <h2 className={styles.emccTxt}>
+                {" "}
+                Learn. Invent. Discover. (L.I.D)
+              </h2>
+              <h3 className={styles.emccSubTxt}>
+                Our philosophy inspires students to continuously learn new
+                skills, invent groundbreaking solutions, and discover new
+                possibilities, preparing them for the future. 🚀
+              </h3>
+            </div>
           </div>
         </div>
       </section>
