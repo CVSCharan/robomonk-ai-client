@@ -4,6 +4,11 @@ import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import K12Nav from "@/sections/K12Nav";
 import Image from "next/image";
+import {
+  k12CoursesData,
+  k12EducatorsData,
+  k12StudentTestimonials,
+} from "@/utils/data";
 
 const K12Programs = () => {
   const magicWords = [
@@ -182,13 +187,14 @@ const K12Programs = () => {
               </div>
             </div>
 
-            <p className={styles.lidPara}>
+            <p className={styles.lidPara} style={{ maxWidth: "650px" }}>
               This L.I.D philosophy is embedded in RoboMonk’s curriculum,
               training, and approach, ensuring that every learner is prepared to
               thrive in the ever-evolving technological landscape. 🚀
             </p>
           </div>
         </div>
+
         <div className={styles.emccContainer}>
           <div className={styles.emccInnerContainer}>
             <h2 className={styles.emccHeading}>
@@ -239,6 +245,95 @@ const K12Programs = () => {
                 skills, invent groundbreaking solutions, and discover new
                 possibilities, preparing them for the future. 🚀
               </h3>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.bodyWrapper}>
+          <div className={styles.coursesContainer}>
+            <h2 className={styles.coursesHeading}>
+              Open the Door to New Edventures
+            </h2>
+
+            <div className={styles.coursesInnerContainer}>
+              {k12CoursesData.map((item, index) => (
+                <div
+                  key={index}
+                  className={
+                    index % 2 === 0 ? styles.courseOdd : styles.courseEven
+                  }
+                >
+                  <Image
+                    src={item.imgSrc}
+                    alt="K-12 Course Img"
+                    height={180}
+                    width={180}
+                    priority
+                    className={styles.courseImg}
+                  />
+                  <div
+                    className={
+                      index % 2 === 0
+                        ? styles.courseContentOdd
+                        : styles.courseContentEven
+                    }
+                  >
+                    <h2 className={styles.courseTxt}>{item.title}</h2>
+                    <h3 className={styles.courseSubTxt}>{item.desc}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button>View More</button>
+          </div>
+        </div>
+
+        <div className={styles.educatorsContainer}>
+          <h2 className={styles.educatorsHeading}>
+            Unlock Wisdom from Seasoned Professionals
+          </h2>
+
+          <div className={styles.educatorsInnerContainer}>
+            {k12EducatorsData.map((item, index) => (
+              <div key={index} className={styles.educatorCard}>
+                <Image
+                  src={item.imgSrc}
+                  alt="K-12 Educator"
+                  height={150}
+                  width={150}
+                  priority
+                  className={styles.educatorImg}
+                />
+                <div className={styles.educatorContent}>
+                  <h2 className={styles.educatorName}>{item.name}</h2>
+                  <h3 className={styles.educatorDesc}>{item.desc}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button>Join Now</button>
+        </div>
+
+        <div className={styles.bodyWrapper}>
+          <div className={styles.testimonialsContainer}>
+            <h2 className={styles.testimonialsHeading}>Top Performers</h2>
+            <h3 className={styles.testimonialsSubHeading}>
+              This section highlights outstanding students who have demonstrated
+              exceptional skills in robotics, AI, coding, and STEM-related
+              projects. Their achievements inspire fellow learners and showcase
+              the potential of young innovators.
+            </h3>
+
+            <div className={styles.testimonialsInnerContainer}>
+              {k12StudentTestimonials.map((item, index) => (
+                <div key={index} className={styles.testimonialCard}>
+                  <h2 className={styles.testimonialName}>{item.name}</h2>
+                  <p className={styles.testimonialDesc}>{item.desc}</p>
+                  <p className={styles.testimonialComment}>"{item.comment}"</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

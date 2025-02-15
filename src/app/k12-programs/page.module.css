@@ -248,11 +248,13 @@
 
 .emccHeading {
   font-family: "M PLUS Rounded 1c", serif;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
   letter-spacing: 0.03rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  max-width: 650px;
+  text-align: center;
 }
 
 .emccTxt {
@@ -282,4 +284,252 @@
   align-items: flex-start;
   gap: 0.7rem;
   width: 100%;
+}
+
+.coursesContainer {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.coursesHeading {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  color: #333;
+}
+
+.coursesInnerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.courseOdd {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background: #f8f9fa; /* Light background for a modern feel */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.courseEven {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f8f9fa; /* Light background for a modern feel */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+}
+
+.courseImg {
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.courseContentEven {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.courseContentOdd {
+  padding-right: 1.5rem;
+  text-align: left;
+}
+
+.courseTxt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-family: "Merriweather", serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.courseSubTxt {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+}
+
+.educatorsContainer {
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f4f4f4; /* Soft light gray for a refined look */
+}
+
+.educatorsHeading {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  color: #333;
+}
+
+.educatorsInnerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.educatorCard {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 550px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.educatorCard:hover {
+  transform: translateY(-5px);
+}
+
+.educatorImg {
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid #007bff; /* Adds a subtle accent */
+}
+
+.educatorContent {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.educatorName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-family: "Merriweather", serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.educatorDesc {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+}
+
+.testimonialsContainer {
+  width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonialsHeading {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  color: #6d5fb5; /* Professional purple shade */
+}
+
+.testimonialsSubHeading {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialsInnerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  background: #f8f9fa; /* Light background for a modern feel */
+}
+
+.testimonialCard:hover {
+  transform: scale(1.05);
+}
+
+/* Color Variations */
+.testimonialCard0 {
+  background: #ffebeb; /* Light Red */
+}
+
+.testimonialCard1 {
+  background: #fff3cd; /* Light Yellow */
+}
+
+.testimonialCard2 {
+  background: #d4edda; /* Light Green */
+}
+
+.testimonialName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-family: "Merriweather", serif;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.testimonialDesc {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  text-align: justify;
+}
+
+.testimonialComment {
+  font-size: 1rem;
+  font-style: italic;
+  color: #333;
+  margin-top: 1rem;
+  border-left: 4px solid #6d5fb5;
+  padding-left: 1rem;
+  line-height: 1.6;
 }
