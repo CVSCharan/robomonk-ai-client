@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25rem;
+  height: 90vh;
   position: relative; /* Ensure relative positioning for absolute children */
   overflow: hidden; /* Prevents any extra parts from overflowing */
 }
