@@ -533,3 +533,25 @@
   padding-left: 1rem;
   line-height: 1.6;
 }
+
+.customBtn {
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  border: 1px solid #05676c;
+  color: #05676c;
+  margin: 2rem;
+  width: 150px;
+  background-color: #eaf6f6;
+  font-family: "M PLUS Rounded 1c", serif;
+  letter-spacing: 0.03rem;
+}
+
+.customBtn:hover {
+  background-color: #05676c;
+  color: #eaf6f6;
+}

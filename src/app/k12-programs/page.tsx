@@ -285,7 +285,7 @@ const K12Programs = () => {
               ))}
             </div>
 
-            <button>View More</button>
+            <button className={styles.customBtn}>View More</button>
           </div>
         </div>
 
@@ -313,7 +313,7 @@ const K12Programs = () => {
             ))}
           </div>
 
-          <button>Join Now</button>
+          <button className={styles.customBtn}>Join Now</button>
         </div>
 
         <div className={styles.bodyWrapper}>
