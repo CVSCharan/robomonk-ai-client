@@ -331,7 +331,9 @@ const K12Programs = () => {
                 <div key={index} className={styles.testimonialCard}>
                   <h2 className={styles.testimonialName}>{item.name}</h2>
                   <p className={styles.testimonialDesc}>{item.desc}</p>
-                  <p className={styles.testimonialComment}>"{item.comment}"</p>
+                  <p className={styles.testimonialComment}>
+                    {`"${item.comment}"`}
+                  </p>
                 </div>
               ))}
             </div>
