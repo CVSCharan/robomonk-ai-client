@@ -7,7 +7,6 @@
 }
 
 .bodyWrapper {
-  padding-bottom: 100px;
   background: white;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 98%, 0 100%);
@@ -16,23 +15,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  height: 245vh;
-}
-
-.bodyWrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 240vh;
-  background: linear-gradient(
-    to bottom,
-    #f9f9f9 70%,
-    rgba(45, 156, 219, 0.7) 100%
-  );
-  clip-path: inherit;
-  z-index: -1;
+  height: auto;
+  padding-bottom: 100px;
 }
 
 .landingContainer {
@@ -40,12 +24,21 @@
   justify-content: center;
   align-items: center;
   height: 25rem;
-  padding: 1rem;
   position: relative; /* Ensure relative positioning for absolute children */
   overflow: hidden; /* Prevents any extra parts from overflowing */
 }
 
-.landingContainer::before {
+.landingInnerContainer {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Ensure relative positioning for absolute children */
+  overflow: hidden;
+}
+
+.landingInnerContainer::before {
   content: "";
   position: absolute;
   top: -50px; /* Adjust to move it fully into the corner */
@@ -60,7 +53,7 @@
 }
 
 .landingLeft {
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -70,7 +63,7 @@
 }
 
 .landingRight {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -99,6 +92,7 @@
 }
 
 .landingHeading {
+  font-family: "M PLUS Rounded 1c", serif;
   font-size: 1.4rem;
   line-height: 1.6;
   letter-spacing: 0.03rem;
@@ -126,6 +120,8 @@
   -webkit-text-fill-color: transparent;
   font-size: 1.7rem;
   animation: slideUp 0.8s ease-in-out;
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
 }
 
 .lidContainer {
@@ -139,17 +135,21 @@
 }
 
 .lidImg {
-  width: 480px;
-  height: 170px;
+  width: 100%;
+  height: 570px;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  max-width: 80rem;
 }
 
 .lidHeading {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .lidSpan {
@@ -158,39 +158,66 @@
   font-size: 1.5rem;
 }
 
+.lidContentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  max-width: 80rem;
+  margin: auto;
+}
+
 .lidContent {
-  padding: 2rem;
+  flex: 1;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.7rem;
-  width: 100%;
+  gap: 1rem;
 }
 
 .lidTxt {
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  color: #333;
+  line-height: 1.4;
   letter-spacing: 0.03rem;
 }
 
 .lidSubTxt {
-  font-family: "M PLUS Rounded 1c", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.6;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #555;
   text-align: justify;
+  max-width: 650px;
 }
 
 .lidPointsTxt {
-  font-family: "M PLUS Rounded 1c", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
+  color: #666;
   letter-spacing: 0.03rem;
-  padding-left: 1rem;
+}
+
+.lidImg {
+  flex: 1;
+  width: 100%;
+  max-width: 80rem;
+  height: auto;
+  border-radius: 0.8rem;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .lidPara {
@@ -207,14 +234,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 3rem;
 }
 
 .emccHeading {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
   letter-spacing: 0.03rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  
 }
 
 .emccTxt {
@@ -222,12 +253,16 @@
   font-weight: 600;
   line-height: 1.6;
   letter-spacing: 0.03rem;
+  font-family: "Merriweather", serif;
+  color: #333;
 }
 
 .emccSubTxt {
-  font-family: "M PLUS Rounded 1c", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  line-height: 1.6;
+  color: #666;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.03rem;
   text-align: justify;
