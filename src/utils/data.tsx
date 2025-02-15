@@ -78,42 +78,36 @@ export const k12StudentTestimonials: K12StudentTestimonialsDataItem[] = [
     id: 1,
     name: "Vikranth",
     desc: "Recognized for exceptional problem-solving skills and creativity in robotics projects, Vikranth stands out as a young innovator.",
-    comment:
-      "The robotics challenges helped me think critically and improve my problem-solving skills. Every project was a new learning experience!",
+    comment: `The robotics challenges helped me think critically and improve my problem-solving skills. Every project was a new learning experience!`,
   },
   {
     id: 2,
     name: "Sai Nikhith",
     desc: "A top performer in AI and coding challenges, Sai Nikhith has consistently demonstrated excellence in implementing complex algorithms.",
-    comment:
-      "AI has always fascinated me, and the structured learning approach made it easier to grasp complex concepts. I love applying what I learn to real-world projects!",
+    comment: `AI has always fascinated me, and the structured learning approach made it easier to grasp complex concepts. I love applying what I learn to real-world projects!`,
   },
   {
     id: 3,
     name: "Sathamanyu",
     desc: "Known for his hands-on expertise in electronics projects, Sathamanyu has impressed with his practical approach to learning.",
-    comment:
-      "I enjoy working with circuits and sensors. The hands-on projects gave me confidence to build my own electronics-based innovations!",
+    comment: `I enjoy working with circuits and sensors. The hands-on projects gave me confidence to build my own electronics-based innovations!`,
   },
   {
     id: 4,
     name: "Yuvaan",
     desc: "With a keen interest in mathematics and robotics, Yuvaan has shown remarkable performance in competitions and classroom activities.",
-    comment:
-      "Combining math with robotics has been an exciting journey. The interactive learning sessions made everything so much fun and engaging!",
+    comment: `Combining math with robotics has been an exciting journey. The interactive learning sessions made everything so much fun and engaging!`,
   },
   {
     id: 5,
     name: "Neel Nithin",
     desc: "A passionate learner excelling in STEM programs, Neel Nithin’s dedication to exploring new technologies sets him apart.",
-    comment:
-      "STEM education opened up a world of opportunities for me. Exploring new tech and working on projects has been an amazing experience!STEM education opened up a world of opportunities for me. Exploring new tech and working on projects has been an amazing experience!",
+    comment: `STEM education opened up a world of opportunities for me. Exploring new tech and working on projects has been an amazing experience!STEM education opened up a world of opportunities for me. Exploring new tech and working on projects has been an amazing experience!`,
   },
   {
     id: 6,
     name: "Advika",
     desc: "Advika has earned recognition for her innovative thinking and outstanding performance in collaborative robotics projects.",
-    comment:
-      "Teamwork and creativity were the best parts of my robotics projects. Working with others helped me learn new perspectives and develop my skills!",
+    comment: `Teamwork and creativity were the best parts of my robotics projects. Working with others helped me learn new perspectives and develop my skills!`,
   },
 ];
