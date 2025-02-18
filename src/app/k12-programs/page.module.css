@@ -156,6 +156,7 @@
   font-family: "M PLUS Rounded 1c", serif;
   font-weight: 500;
   font-size: 1.5rem;
+  color: #6d5fb5; /* Professional purple shade */
 }
 
 .lidContentContainer {
@@ -187,9 +188,9 @@
   font-size: 1.2rem;
   font-weight: 700;
   font-family: "Merriweather", serif;
-  color: #333;
   line-height: 1.4;
   letter-spacing: 0.03rem;
+  color: #05676c;
 }
 
 .lidSubTxt {
@@ -209,6 +210,7 @@
   line-height: 1.6;
   color: #666;
   letter-spacing: 0.03rem;
+  text-align: center;
 }
 
 .lidImg {
@@ -255,6 +257,7 @@
   margin-bottom: 1rem;
   max-width: 650px;
   text-align: center;
+  color: #6d5fb5; /* Professional purple shade */
 }
 
 .emccTxt {
@@ -263,7 +266,7 @@
   line-height: 1.6;
   letter-spacing: 0.03rem;
   font-family: "Merriweather", serif;
-  color: #333;
+  color: #05676c;
 }
 
 .emccSubTxt {
@@ -290,6 +293,10 @@
   width: 100%;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .coursesHeading {
@@ -299,7 +306,7 @@
   letter-spacing: 0.03rem;
   line-height: 1.6;
   margin: 2rem 0;
-  color: #333;
+  color: #6d5fb5; /* Professional purple shade */
 }
 
 .coursesInnerContainer {
@@ -307,17 +314,19 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 80rem;
 }
 
 .courseOdd {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  background: #f8f9fa; /* Light background for a modern feel */
+  background: #ffefef; /* Light background for a modern feel */
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 700px;
+  height: 300px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -325,11 +334,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #f8f9fa; /* Light background for a modern feel */
+  background: #ffefef; /* Light background for a modern feel */
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 700px;
+  height: 300px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -344,12 +354,12 @@
 
 .courseContentEven {
   padding-left: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .courseContentOdd {
   padding-right: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .courseTxt {
@@ -358,7 +368,7 @@
   line-height: 1.6;
   letter-spacing: 0.03rem;
   font-family: "Merriweather", serif;
-  color: #333;
+  color: #05676c;
   margin-bottom: 0.5rem;
 }
 
@@ -372,10 +382,28 @@
   text-align: justify;
 }
 
+.courseBtn {
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid #05676c;
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  margin-top: 1rem;
+}
+
 .educatorsContainer {
   width: 100%;
   padding: 3rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #f4f4f4; /* Soft light gray for a refined look */
 }
 
@@ -386,7 +414,7 @@
   letter-spacing: 0.03rem;
   line-height: 1.6;
   margin: 2rem 0;
-  color: #333;
+  color: #6d5fb5; /* Professional purple shade */
 }
 
 .educatorsInnerContainer {
@@ -394,16 +422,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 80rem;
 }
 
 .educatorCard {
   display: flex;
-  align-items: center;
-  background: white;
+  align-items: flex-start;
+  background: #e7fbe6;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 550px;
+  max-width: 420px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -414,7 +443,7 @@
 .educatorImg {
   border-radius: 50%;
   flex-shrink: 0;
-  border: 3px solid #007bff; /* Adds a subtle accent */
+  border: 3px solid #A3D8FF; /* Adds a subtle accent */
 }
 
 .educatorContent {
@@ -428,13 +457,13 @@
   line-height: 1.6;
   letter-spacing: 0.03rem;
   font-family: "Merriweather", serif;
-  color: #333;
+  color: #FF8E8F;
   margin-bottom: 0.5rem;
 }
 
 .educatorDesc {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
   font-weight: 400;
   line-height: 1.6;
@@ -446,6 +475,10 @@
   width: 100%;
   padding: 3rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonialsHeading {
@@ -470,7 +503,9 @@
 
 .testimonialsInnerContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
 }
@@ -478,30 +513,38 @@
 .testimonialCard {
   display: flex;
   flex-direction: column;
+  height: 380px;
   padding: 1.5rem;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 370px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: transform 0.3s ease-in-out;
   background: #f8f9fa; /* Light background for a modern feel */
 }
 
-.testimonialCard:hover {
-  transform: scale(1.05);
-}
-
 /* Color Variations */
-.testimonialCard0 {
+.testimonialCard:last-child {
   background: #ffebeb; /* Light Red */
 }
 
-.testimonialCard1 {
+.testimonialCard:first-child {
   background: #fff3cd; /* Light Yellow */
 }
 
-.testimonialCard2 {
+.testimonialCard:nth-child(2) {
   background: #d4edda; /* Light Green */
+}
+
+.testimonialCard:nth-child(3) {
+  background: #e8f9ff; /* Light Green */
+}
+
+.testimonialCard:nth-child(4) {
+  background: #e5d9f2; /* Light Green */
+}
+
+.testimonialCard:nth-child(5) {
+  background: #c5d3e8; /* Light Green */
 }
 
 .testimonialName {
@@ -525,11 +568,11 @@
 }
 
 .testimonialComment {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: italic;
   color: #333;
-  margin-top: 1rem;
-  border-left: 4px solid #6d5fb5;
+  margin-top: 0.5rem;
+  border-left: 2px solid #555;
   padding-left: 1rem;
   line-height: 1.6;
 }

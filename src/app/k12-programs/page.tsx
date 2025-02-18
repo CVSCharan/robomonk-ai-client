@@ -32,6 +32,16 @@ const K12Programs = () => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [key, setKey] = useState(0);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % k12CoursesData.length); // Infinite loop for Banner One
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval); // Cleanup the interval on unmount
+  }, [k12CoursesData]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeout(() => {
@@ -43,6 +53,8 @@ const K12Programs = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const currentItem = k12CoursesData[currentIndex];
 
   return (
     <main>
@@ -110,80 +122,34 @@ const K12Programs = () => {
                 <h2 className={styles.lidTxt} style={{ alignSelf: "center" }}>
                   Learn
                 </h2>
-                <h2 className={styles.lidTxt}>
+                <h2
+                  className={styles.lidPointsTxt}
+                  style={{ alignSelf: "center" }}
+                >
                   Gaining Knowledge & Building Strong Foundations
                 </h2>
-                <h3 className={styles.lidPointsTxt}>
-                  • Hands-on, experiential learning with real-world
-                  applications.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Multidisciplinary approach integrating Robotics, AI, and
-                  STEM.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Problem-solving and critical thinking at the core of
-                  learning.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Engaging, student-centric methodologies that encourage
-                  curiosity.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Learning beyond textbooks with interactive experiments and
-                  projects.
-                </h3>
               </div>
               <div className={styles.lidContent}>
                 <h2 className={styles.lidTxt} style={{ alignSelf: "center" }}>
                   Invent
                 </h2>
-                <h2 className={styles.lidTxt}>
+                <h2
+                  className={styles.lidPointsTxt}
+                  style={{ alignSelf: "center" }}
+                >
                   Creating & Innovating Solutions
                 </h2>
-                <h3 className={styles.lidPointsTxt}>
-                  • Encouraging a maker mindset with hands-on prototyping.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Developing unique solutions through design thinking.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Applying creativity to real-world engineering and tech
-                  challenges.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Bridging academic knowledge with industry-oriented
-                  problem-solving.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Fostering collaboration to develop and refine innovative
-                  ideas.
-                </h3>
               </div>
               <div className={styles.lidContent}>
                 <h2 className={styles.lidTxt} style={{ alignSelf: "center" }}>
                   Discover
                 </h2>
-                <h2 className={styles.lidTxt}>
+                <h2
+                  className={styles.lidPointsTxt}
+                  style={{ alignSelf: "center" }}
+                >
                   Exploring New Possibilities & Expanding Horizons
                 </h2>
-                <h3 className={styles.lidPointsTxt}>
-                  • Cultivating curiosity to explore emerging technologies and
-                  trends.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Empowering students to push boundaries and challenge
-                  assumptions.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Enabling self-driven exploration and independent learning.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Connecting classroom concepts with real-world innovations.
-                </h3>
-                <h3 className={styles.lidPointsTxt}>
-                  • Inspiring students to pursue careers in future technologies.
-                </h3>
               </div>
             </div>
 
@@ -256,33 +222,31 @@ const K12Programs = () => {
             </h2>
 
             <div className={styles.coursesInnerContainer}>
-              {k12CoursesData.map((item, index) => (
+              <div
+                className={`${styles.courseCard} ${
+                  currentIndex % 2 === 0 ? styles.courseOdd : styles.courseEven
+                }`}
+              >
+                <Image
+                  src={currentItem.imgSrc}
+                  alt="K-12 Course Img"
+                  height={180}
+                  width={180}
+                  priority
+                  className={styles.courseImg}
+                />
                 <div
-                  key={index}
                   className={
-                    index % 2 === 0 ? styles.courseOdd : styles.courseEven
+                    currentIndex % 2 === 0
+                      ? styles.courseContentOdd
+                      : styles.courseContentEven
                   }
                 >
-                  <Image
-                    src={item.imgSrc}
-                    alt="K-12 Course Img"
-                    height={180}
-                    width={180}
-                    priority
-                    className={styles.courseImg}
-                  />
-                  <div
-                    className={
-                      index % 2 === 0
-                        ? styles.courseContentOdd
-                        : styles.courseContentEven
-                    }
-                  >
-                    <h2 className={styles.courseTxt}>{item.title}</h2>
-                    <h3 className={styles.courseSubTxt}>{item.desc}</h3>
-                  </div>
+                  <h2 className={styles.courseTxt}>{currentItem.title}</h2>
+                  <h3 className={styles.courseSubTxt}>{currentItem.desc}</h3>
+                  <button className={styles.courseBtn}>Join</button>
                 </div>
-              ))}
+              </div>
             </div>
 
             <button className={styles.customBtn}>View More</button>
@@ -300,8 +264,8 @@ const K12Programs = () => {
                 <Image
                   src={item.imgSrc}
                   alt="K-12 Educator"
-                  height={150}
-                  width={150}
+                  height={120}
+                  width={120}
                   priority
                   className={styles.educatorImg}
                 />
