@@ -509,6 +509,7 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
+  max-width: 80rem;
 }
 
 .testimonialCard {
