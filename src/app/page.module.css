@@ -4,7 +4,7 @@
   margin-right: auto;
   overflow-x: hidden;
   position: relative;
-  background: #f9f9f9;
+  background: #f4fcff;
 }
 
 /* ==== Landing Section ==== */
@@ -155,7 +155,7 @@
   z-index: 10;
   position: relative;
   height: 15vh;
-  background: #f9f9f9;
+  background: #f4fcff;
   text-align: center;
 }
 

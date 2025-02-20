@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <main style={{ background: "#f4fcff" }}>
       <section className={styles.mainBody}>
         <div className={styles.bodyWrapper}>
           <div className={styles.landingSection}>
