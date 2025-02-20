@@ -3,10 +3,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import K12Nav from "@/sections/K12Nav";
+import { Instagram } from "@mui/icons-material";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Image from "next/image";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   k12CoursesData,
   k12EducatorsData,
+  k12SchoolClientsData,
   k12StudentTestimonials,
 } from "@/utils/data";
 
@@ -57,7 +61,7 @@ const K12Programs = () => {
   const currentItem = k12CoursesData[currentIndex];
 
   return (
-    <main>
+    <main style={{ background: "#f4fcff" }}>
       <K12Nav />
       <section className={styles.mainbody}>
         <div className={styles.landingContainer}>
@@ -303,7 +307,122 @@ const K12Programs = () => {
             </div>
           </div>
         </div>
+
+        <div className={styles.schoolProfilesContainer}>
+          <h2 className={styles.schoolProfilesHeading}>
+            Join the family of Edventures
+          </h2>
+
+          <div className={styles.schoolProfilesInnerContainer}>
+            {k12SchoolClientsData.map((item, index) => (
+              <div key={index} className={styles.schoolProfilesCard}>
+                <Image
+                  src={item.imgSrc}
+                  alt="School Profile Img"
+                  height={200}
+                  width={300}
+                  priority
+                  className={styles.schoolProfilesImg}
+                />
+                <h2 className={styles.schoolProfilesTxt}>{item.name}</h2>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+      <footer className={styles.footerMainContainer}>
+        <div className={styles.footerHeaderContainer}>
+          <div className={styles.footerHeader}>
+            <Image
+              src={"/images/robomonk-logo-img.webp"}
+              alt={"Footer Logo Img"}
+              height={250}
+              width={250}
+              priority
+              className={styles.logoImg}
+            />
+          </div>
+          <div className={styles.socialMediaIcons}>
+            <a
+              href="https://www.instagram.com/robomonk.ai/?igsh=bnh1M2owOGRiOTRl#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Instagram className={styles.icon} fontSize="large" />
+            </a>
+            <a
+              href="https://wa.me/qr/K5ILKPFNLG76J1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <WhatsAppIcon className={styles.icon} fontSize="large" />
+            </a>
+            <a
+              href="https://www.threads.net/@robomonk.ai?invite=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <Image
+                src={"/images/threads.png"}
+                alt={"Threads social media icon"}
+                height={100}
+                width={100}
+                priority
+                className={styles.icon}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/robomonk-ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <LinkedInIcon className={styles.icon} fontSize="large" />
+            </a>
+          </div>
+        </div>
+        <div className={styles.footerQuickLinksContainer}>
+          <div className={styles.footerQuickLinksSubContainer}>
+            <h2
+              className={styles.footerTxt}
+              style={{ marginBottom: "1rem", fontSize: "1.15rem" }}
+            >
+              Learn
+            </h2>
+            <h3 className={styles.quickLink}>Club & Activities</h3>
+            <h3 className={styles.quickLink}>Spark Events</h3>
+            <h3 className={styles.quickLink}>Bootcamps</h3>
+            <h3 className={styles.quickLink}>Scifi</h3>
+          </div>
+          <div className={styles.footerQuickLinksSubContainer}>
+            <h2
+              className={styles.footerTxt}
+              style={{ marginBottom: "1rem", fontSize: "1.15rem" }}
+            >
+              Teach
+            </h2>
+            <h3 className={styles.quickLink}>Join as Educator</h3>
+          </div>
+          <div className={styles.footerQuickLinksSubContainer}>
+            <h2
+              className={styles.footerTxt}
+              style={{ marginBottom: "1rem", fontSize: "1.15rem" }}
+            >
+              Support
+            </h2>
+            <h3 className={styles.quickLink}>Help</h3>
+            <h3 className={styles.quickLink}>Safety</h3>
+            <h3 className={styles.quickLink}>Privacy Policy</h3>
+            <h3 className={styles.quickLink}>Terms & Conditions</h3>
+          </div>
+        </div>
+        <h2 className={styles.footerTxt}>
+          © 2025 All rights reserved - Robomonk Technologies Pvt. Ltd.
+        </h2>
+      </footer>
     </main>
   );
 };

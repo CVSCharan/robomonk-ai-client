@@ -3,7 +3,7 @@
   margin-right: auto;
   overflow-x: hidden;
   position: relative;
-  background: #f9f9f9;
+  background: #f4fcff;
 }
 
 .bodyWrapper {
@@ -36,6 +36,7 @@
   height: 100%;
   position: relative; /* Ensure relative positioning for absolute children */
   overflow: hidden;
+  background: #f4fcff;
 }
 
 .landingInnerContainer::before {
@@ -165,7 +166,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
-  background: white;
+  background: #e2e9f9;
   padding: 2.5rem;
   border-radius: 1rem;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -404,7 +405,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f4f4f4; /* Soft light gray for a refined look */
+  background: #f4fcff; /* Soft light gray for a refined look */
 }
 
 .educatorsHeading {
@@ -553,7 +554,7 @@
   line-height: 1.6;
   letter-spacing: 0.03rem;
   font-family: "Merriweather", serif;
-  color: #333;
+  color: #eb8282;
   margin-bottom: 0.5rem;
 }
 
@@ -572,7 +573,7 @@
   font-style: italic;
   color: #333;
   margin-top: 0.5rem;
-  border-left: 2px solid #555;
+  border-left: 2px solid #eb8282;
   padding-left: 1rem;
   line-height: 1.6;
 }
@@ -597,4 +598,206 @@
 .customBtn:hover {
   background-color: #05676c;
   color: #eaf6f6;
+}
+
+.schoolProfilesContainer {
+  width: 100%;
+  padding: 3rem 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4fcff; /* Soft light gray for a refined look */
+}
+
+.schoolProfilesHeading {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  color: #6d5fb5; /* Professional purple shade */
+}
+
+.schoolProfilesInnerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 80rem;
+}
+
+.schoolProfilesCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffe6c9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.schoolProfilesImg {
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.schoolProfilesTxt {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-family: "Merriweather", serif;
+  color: #3674b5;
+  margin: 1rem 0 0 0;
+}
+
+.footerMainContainer {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #04364a;
+  background: #eaf6f6;
+  border-top: 1px solid #d0ddd0;
+  padding: 1rem 0;
+}
+
+.footerHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footerHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footerSpan {
+  color: #04364a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.socialMediaIcons {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.icon {
+  fill: black !important; /* Default icon color */
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  margin: 0 2rem;
+  max-height: 25px;
+  max-width: 25px;
+}
+
+.logoImg {
+  height: 40px;
+  width: 150px;
+  border: 0;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.footerHeading {
+  font-size: 2rem;
+  color: #04364a;
+  font-weight: 300;
+  margin: 0;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add depth to text */
+}
+
+.footerSubHeading {
+  font-size: 1rem;
+  font-family: "Parkinsans", serif;
+  color: #04364a;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add depth to text */
+}
+
+.footerPara {
+  font-size: 0.9rem;
+  color: #04364a;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  text-align: justify;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.footerQuickLinksContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.footerQuickLinksSubContainer {
+  padding: 0 1rem;
+  margin: 0 2rem;
+}
+
+.quickLink {
+  font-size: 1rem;
+  color: #04364a;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.quickLink:hover {
+  padding: 0.3rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4); /* Highlight effect */
+  transform: scale(1.005); /* Slight zoom effect */
+}
+
+.footerTxt {
+  font-family: "M PLUS Rounded 1c", serif;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #04364a;
+  margin-top: 10px;
+}
+
+.footerSubTxt {
+  font-family: "Montserrat", Sans-serif;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: #04364a;
+  margin-top: 10px;
 }

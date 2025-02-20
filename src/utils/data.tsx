@@ -1,6 +1,7 @@
 import {
   K12CoursesDataItem,
   K12EducatorsDataItem,
+  K12SchoolClientsDataItem,
   K12StudentTestimonialsDataItem,
 } from "./types";
 
@@ -109,5 +110,20 @@ export const k12StudentTestimonials: K12StudentTestimonialsDataItem[] = [
     name: "Advika",
     desc: "Advika has earned recognition for her innovative thinking and outstanding performance in collaborative robotics projects.",
     comment: `Teamwork and creativity were the best parts of my robotics projects. Working with others helped me learn new perspectives and develop my skills!`,
+  },
+];
+
+export const k12SchoolClientsData: K12SchoolClientsDataItem[] = [
+  {
+    id: 1,
+    name: "Rainbow",
+    imgSrc:
+      "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/RAINBOW_SCHOOL_LOGO.jpg?raw=true",
+  },
+  {
+    id: 2,
+    name: "Sadhguru Silver Oaks",
+    imgSrc:
+      "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/SSOAKS(SADHGURU_sILVER_OAKS).png?raw=true",
   },
 ];

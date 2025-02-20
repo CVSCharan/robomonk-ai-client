@@ -18,3 +18,9 @@ export interface K12StudentTestimonialsDataItem {
   desc: string;
   comment: string;
 }
+
+export interface K12SchoolClientsDataItem {
+  id: number;
+  name: string;
+  imgSrc: string;
+}
