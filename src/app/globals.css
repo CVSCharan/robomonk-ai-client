@@ -35,18 +35,18 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 11px;
+  width: 12px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #aff2f2;
+  background-color: #f4fcff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #4a9faf;
-  border-radius: 20px;
+  background-color: #eaf6f6;
+  border-radius: 15px;
   border: 2px solid #73c7c7;
 }
 
