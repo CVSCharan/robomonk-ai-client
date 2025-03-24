@@ -44,7 +44,7 @@ export default function Home() {
                   width={300}
                   priority
                 />
-                <h2>👉 Future-Ready STEM, AI & Robotics Labs for Schools</h2>
+                <h2>🤖 Future-Ready STEM, AI & Robotics Labs for Schools</h2>
                 <button onClick={() => handleClick("K-12 Programs")}>
                   Explore K-12 Programs
                 </button>
@@ -59,7 +59,7 @@ export default function Home() {
                   width={300}
                   priority
                 />
-                <h2>👉 Industry-Aligned Training & Research Labs</h2>
+                <h2>🎓 Industry-Aligned Training & Research Labs</h2>
                 <button onClick={() => handleClick("Engineering Programs")}>
                   Discover Engineering Programs
                 </button>
@@ -74,7 +74,7 @@ export default function Home() {
                   width={300}
                   priority
                 />
-                <h2>👉 AI & Robotics Solutions for Smart Industries</h2>
+                <h2>🏭 AI & Robotics Solutions for Smart Industries</h2>
                 <button onClick={() => handleClick("Industrial Solutions")}>
                   Explore Industry 4.0 Solutions
                 </button>
