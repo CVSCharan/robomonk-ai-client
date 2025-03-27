@@ -1,172 +1,220 @@
-/* Root Nav Styles */
 .nav {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
-  color: #04364a;
-  background: #eaf6f6;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--background-color, #ffffff);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  height: 60px;
 }
 
-/* Navbar container */
+.scrolled {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav.scrolled {
+  height: 70px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
 }
 
-/* Logo */
 .navLogo {
-  font-weight: 500;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   text-decoration: none;
-  color: #05676c;
 }
 
 .logoImg {
-  height: 40px;
-  width: 150px;
-  border-radius: 8px;
+  width: 120px;
+  height: 60px;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 
-/* Nav Items */
+.scrolled .logoImg {
+  width: 120px;
+  height: 60px;
+}
+
 .navItems {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* Hide items on mobile */
-@media screen and (max-width: 768px) {
-  .navItems {
-    display: none;
-  }
-}
-
-/* Nav Links */
 .navLink {
+  color: var(--text-color);
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
-  color: #04364a;
-  letter-spacing: 0.03rem;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-  font-family: "M PLUS Rounded 1c", serif;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
 }
 
 .navLink:hover {
-  color: #05676c;
-  text-decoration: underline;
+  color: var(--primary-color);
 }
 
-/* Button Container */
+.navLink:hover:after {
+  width: 100%;
+}
+
 .btnContainer {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .btnContainer {
-    display: none;
-  }
-}
-
-/* Main Button */
 .labSolBtn {
-  border-radius: 1rem;
-  cursor: pointer;
-  padding: 8px 12px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
   text-decoration: none;
-  border: 1px solid #05676c;
-  color: #05676c;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 98, 204, 0.2);
 }
 
 .labSolBtn:hover {
-  background: linear-gradient(135deg, #eaf6f6 0%, #b3eae7);
-  color: #04364a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 98, 204, 0.3);
 }
 
-/* Mobile Menu Icon */
 .mobileIcon {
   display: none;
-  color: #04364a;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+.mobileIcon:hover {
+  color: var(--primary-color);
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileMenuContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavLink {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  color: var(--primary-color);
+  padding-left: 0.5rem;
+}
+
+.mobileBtnContainer {
+  margin-top: 2rem;
+}
+
+.mobileLabSolBtn {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 98, 204, 0.2);
+}
+
+.mobileLabSolBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 98, 204, 0.3);
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+  .navItems {
+    display: none;
+  }
+
+  .btnContainer {
+    display: none;
+  }
+
   .mobileIcon {
+    display: block;
+  }
+
+  .mobileMenu {
     display: block;
   }
 }
 
-/* Mobile Menu */
-.mobileMenu {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  background: #eaf6f6;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px 24px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-100%);
-  opacity: 0;
-  z-index: -1;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
+@media screen and (max-width: 480px) {
+  .navbarContainer {
+    padding: 0 1rem;
+  }
 
-/* Show Menu */
-.mobileMenu.open {
-  transform: translateY(0);
-  opacity: 1;
-  z-index: 10;
-}
+  .logoImg {
+    height: 40px;
+  }
 
-.mobileMenu a {
-  margin: 10px 0;
-  color: #04364a;
-  font-size: 0.9rem;
-}
-
-.mobileMenu a:hover {
-  color: #05676c;
-}
-
-/* Mobile Button */
-.mobileBtnContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.mobileLabSolBtn {
-  border-radius: 1rem;
-  cursor: pointer;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  border: 1px solid #05676c;
-  color: #05676c;
-}
-
-.mobileLabSolBtn:hover {
-  background-color: #05676c;
-  color: #eaf6f6;
+  .mobileMenuContent {
+    width: 80%;
+  }
 }

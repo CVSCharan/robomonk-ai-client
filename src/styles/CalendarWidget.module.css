@@ -1,0 +1,59 @@
+.calendarWidget {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendarHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendarHeader h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color, #2d3748);
+}
+
+.calendarHeader p {
+  color: var(--light-text, #718096);
+  font-size: 0.95rem;
+}
+
+.calendarPlaceholder {
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 3rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendarPlaceholder p {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.bookButton {
+  background: var(--primary-color, #3498db);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.bookButton:hover {
+  background: var(--primary-dark, #2980b9);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

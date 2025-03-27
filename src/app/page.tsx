@@ -21,62 +21,84 @@ export default function Home() {
   };
 
   return (
-    <main style={{ background: "#f4fcff" }}>
+    <main className={styles.mainContainer}>
       <section className={styles.mainBody}>
         <div className={styles.bodyWrapper}>
           <div className={styles.landingSection}>
             <Image
               src={"/images/robomonkai-logo-img.jpg"}
-              alt={"Coming Up Section Img"}
-              height={250}
-              width={250}
+              alt={"Robomonk AI Logo"}
+              height={150}
+              width={150}
               priority
               className={styles.logo}
             />
+
             <div className={styles.cardsContainer}>
               <div className={styles.card}>
-                <Image
-                  src={
-                    "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/cartoon-ai-robot-scene.jpg?raw=true"
-                  }
-                  alt="Robomonk AI Card Img"
-                  height={300}
-                  width={300}
-                  priority
-                />
-                <h2>🤖 Future-Ready STEM, AI & Robotics Labs for Schools</h2>
-                <button onClick={() => handleClick("K-12 Programs")}>
-                  Explore K-12 Programs
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={
+                      "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/cartoon-ai-robot-scene.jpg?raw=true"
+                    }
+                    alt="Robomonk AI Card Img"
+                    fill
+                    priority
+                    className={styles.cardImage}
+                  />
+                </div>
+                <h2 className={styles.cardTitle}>
+                  🤖 Future-Ready STEM, AI & Robotics Labs for Schools
+                </h2>
+                <button
+                  className={styles.cardButton}
+                  onClick={() => handleClick("K-12 Programs")}
+                >
+                  K-12 Programs
                 </button>
               </div>
               <div className={styles.card}>
-                <Image
-                  src={
-                    "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/Designer.jpeg?raw=true"
-                  }
-                  alt="Robomonk AI Card Img"
-                  height={300}
-                  width={300}
-                  priority
-                />
-                <h2>🎓 Industry-Aligned Training & Research Labs</h2>
-                <button onClick={() => handleClick("Engineering Programs")}>
-                  Discover Engineering Programs
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={
+                      "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/Designer.jpeg?raw=true"
+                    }
+                    alt="Robomonk AI Card Img"
+                    fill
+                    priority
+                    className={styles.cardImage}
+                  />
+                </div>
+                <h2 className={styles.cardTitle}>
+                  🎓 Industry-Aligned Training & Research Labs
+                </h2>
+                <button
+                  className={styles.cardButton}
+                  onClick={() => handleClick("Engineering Programs")}
+                >
+                  Engineering Programs
                 </button>
               </div>
               <div className={styles.card}>
-                <Image
-                  src={
-                    "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/cartoon-smoke-with-pipes.jpg?raw=true"
-                  }
-                  alt="Robomonk AI Card Img"
-                  height={300}
-                  width={300}
-                  priority
-                />
-                <h2>🏭 AI & Robotics Solutions for Smart Industries</h2>
-                <button onClick={() => handleClick("Industrial Solutions")}>
-                  Explore Industry 4.0 Solutions
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={
+                      "https://github.com/CVSCharan/robomonk-ai-assets/blob/main/cartoon-smoke-with-pipes.jpg?raw=true"
+                    }
+                    alt="Robomonk AI Card Img"
+                    fill
+                    priority
+                    className={styles.cardImage}
+                  />
+                </div>
+                <h2 className={styles.cardTitle}>
+                  🏭 AI & Robotics Solutions for Smart Industries
+                </h2>
+                <button
+                  className={styles.cardButton}
+                  onClick={() => handleClick("Industrial Solutions")}
+                >
+                  Industry 4.0 Solutions
                 </button>
               </div>
             </div>
@@ -125,12 +147,13 @@ export default function Home() {
             <LinkedInIcon className={styles.icon} fontSize="large" />
           </a>
         </div>
-        <h2 className={styles.footerHeading}>
-          © 2025 All rights reserved - Robomonk Technologies Pvt. Ltd.
-        </h2>
-        <h3 className={styles.footerSubHeading}>
+        <p className={styles.footerHeading}>
+          © {new Date().getFullYear()} All rights reserved - Robomonk
+          Technologies Pvt. Ltd.
+        </p>
+        <p className={styles.footerSubHeading}>
           Developed with 💜 by CVS CHARAN
-        </h3>
+        </p>
       </footer>
     </main>
   );

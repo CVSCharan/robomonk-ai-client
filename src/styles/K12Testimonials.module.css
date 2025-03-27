@@ -1,0 +1,139 @@
+.testimonialsSection {
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f8fafc, #f0f9ff);
+}
+
+.headerContainer {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.sectionDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonialCard {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--gradient-primary);
+}
+
+.studentName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.starIcon {
+  color: #ffd700;
+}
+
+.studentDescription {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.studentComment {
+  font-size: 1rem;
+  color: #718096;
+  font-style: italic;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.quoteIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+  color: #0062cc;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+
+  .sectionDescription {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+
+  .studentName {
+    font-size: 1.3rem;
+  }
+}

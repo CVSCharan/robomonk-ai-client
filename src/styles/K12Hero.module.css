@@ -1,0 +1,228 @@
+.landingContainer {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 3rem 0;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landingInnerContainer {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.landingLeft {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.landingHeading {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.magicWord {
+  font-size: 2rem !important;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.ctaButton {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  margin-top: 1rem;
+}
+
+.landingRight {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.landingBlob {
+  position: absolute;
+  z-index: -1;
+}
+
+.studentHero {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  z-index: 1;
+  object-fit: contain;
+  width: 300px !important;
+  height: 300px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add this to your media queries if you have them */
+@media (max-width: 768px) {
+  .studentHero {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .studentHero {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .landingInnerContainer {
+    max-width: 992px;
+  }
+
+  .landingHeading {
+    font-size: 2.5rem;
+  }
+
+  .magicWord {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .landingInnerContainer {
+    max-width: 768px;
+  }
+
+  .landingHeading {
+    font-size: 2.2rem;
+  }
+
+  .magicWord {
+    font-size: 2.7rem;
+  }
+
+  .landingLeft {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landingContainer {
+    padding: 2rem 0;
+  }
+
+  .landingInnerContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .landingLeft {
+    order: 2;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .landingRight {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+
+  .landingHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .magicWord {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .landingBlob {
+    width: 400px;
+    height: 400px;
+  }
+
+  .studentHero {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .landingContainer {
+    padding: 1.5rem 0;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .landingInnerContainer {
+    padding: 0 1rem;
+  }
+
+  .landingHeading {
+    font-size: 1.8rem;
+  }
+
+  .magicWord {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .landingBlob {
+    width: 300px;
+    height: 300px;
+  }
+
+  .studentHero {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 375px) {
+  .landingHeading {
+    font-size: 1.5rem;
+  }
+
+  .magicWord {
+    font-size: 1.7rem;
+  }
+
+  .landingBlob {
+    width: 250px;
+    height: 250px;
+  }
+
+  .studentHero {
+    width: 200px;
+    height: 200px;
+  }
+}

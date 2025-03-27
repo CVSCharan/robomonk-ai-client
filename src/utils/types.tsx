@@ -24,3 +24,7 @@ export interface K12SchoolClientsDataItem {
   name: string;
   imgSrc: string;
 }
+
+export interface VisibilityState {
+  [key: string]: boolean;
+}
