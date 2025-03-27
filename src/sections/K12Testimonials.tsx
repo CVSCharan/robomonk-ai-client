@@ -30,7 +30,7 @@ const K12Testimonials = () => {
             </h3>
             <p className={styles.studentDescription}>{item.desc}</p>
             <p className={styles.studentComment}>
-              <span className={styles.quoteIcon}>"</span>
+              <span className={styles.quoteIcon}>{`"`}</span>
               {item.comment}
             </p>
           </div>

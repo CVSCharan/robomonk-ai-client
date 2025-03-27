@@ -78,7 +78,7 @@ const K12ScifiPage = () => {
     {
       title: "Flexible Support",
       description:
-        "Whether you're participating individually or as part of a school or institution, we offer adaptable support to meet your unique needs.",
+        "Whether you&apos;re participating individually or as part of a school or institution, we offer adaptable support to meet your unique needs.",
       icon: "🔄",
     },
   ];
@@ -112,14 +112,14 @@ const K12ScifiPage = () => {
               <div className={styles.textContent}>
                 <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
                 <p className={styles.sectionText}>
-                  At Robomonk, we believe in empowering students to explore,
+                  {`At Robomonk, we believe in empowering students to explore,
                   experiment, and showcase their scientific curiosity. Our
                   Science Fair Assistance & Mentorship program is designed to
                   provide students with the tools, knowledge, and guidance they
                   need to succeed in science fairs. Whether you're working on a
                   project as an individual or as part of a team, we offer
                   personalized support to help bring your ideas to life and
-                  guide you through the process from concept to presentation.
+                  guide you through the process from concept to presentation.`}
                 </p>
               </div>
               <div className={styles.imageContainer}>
@@ -201,9 +201,9 @@ const K12ScifiPage = () => {
                   Types of Projects (K-12 Projects)
                 </h2>
                 <p className={styles.sectionText}>
-                  Robomonk's Science Fair Assistance & Mentorship program covers
+                  {`Robomonk's Science Fair Assistance & Mentorship program covers
                   a wide range of project categories for K-12 students,
-                  including but not limited to:
+                  including but not limited to:`}
                 </p>
               </div>
             </div>
@@ -227,11 +227,11 @@ const K12ScifiPage = () => {
           <div className="container">
             <h2 className={styles.sectionTitle}>Where We Offer Our Services</h2>
             <p className={styles.sectionText}>
-              Robomonk's Science Fair Assistance & Mentorship can be integrated
+              {`Robomonk's Science Fair Assistance & Mentorship can be integrated
               into schools, institutions, and colleges based on their specific
               needs. We are committed to providing support where it matters
               most, whether it's for individual students or entire educational
-              institutions.
+              institutions.`}
             </p>
 
             <div className={styles.servicesContainer}>
@@ -241,8 +241,8 @@ const K12ScifiPage = () => {
                   <div className={styles.serviceText}>
                     <h3 className={styles.serviceTitle}>Tailored Support</h3>
                     <p className={styles.serviceDescription}>
-                      We offer flexible and personalized assistance to ensure
-                      that each student's project aligns with their academic
+                      {`We offer flexible and personalized assistance to ensure
+                      that each student's project aligns with their academic`}
                       goals.
                     </p>
                   </div>

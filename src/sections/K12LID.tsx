@@ -54,7 +54,7 @@ const K12LID = () => {
 
         <div className={styles.titleContainer}>
           <h2 className={`section-title gradient-text ${styles.sectionTitle}`}>
-            RoboMonk's L.I.D Philosophy
+            {`RoboMonk's L.I.D Philosophy`}
           </h2>
           <h3 className={styles.subtitle}>Learn . Invent . Discover</h3>
         </div>
@@ -102,9 +102,9 @@ const K12LID = () => {
 
         <div className={styles.footerContainer}>
           <p className={styles.footerText}>
-            This L.I.D philosophy is embedded in RoboMonk's curriculum,
+            {`This L.I.D philosophy is embedded in RoboMonk's curriculum,
             training, and approach, ensuring that every learner is prepared to
-            thrive in the ever-evolving technological landscape.{" "}
+            thrive in the ever-evolving technological landscape.`}{" "}
             <span className={styles.rocketEmoji}>🚀</span>
           </p>
         </div>

@@ -13,7 +13,7 @@ const K12Bootcamps = () => {
         "Learn to build smart devices and connect them to the internet.",
     },
     {
-      title: "Drones' Technology",
+      title: "Drones&apos; Technology",
       icon: "🚁",
       description:
         "Explore the mechanics and programming of modern drone systems.",
@@ -87,7 +87,7 @@ const K12Bootcamps = () => {
     {
       title: "Customizable Modules",
       description:
-        "Tailor the workshop to address your institution's specific learning goals.",
+        "Tailor the workshop to address your institution&apos;s specific learning goals.",
       icon: "🧩",
     },
     {
@@ -232,8 +232,8 @@ const K12Bootcamps = () => {
           <div className="container">
             <h2 className={styles.sectionTitle}>Our Offerings</h2>
             <p className={styles.sectionText}>
-              Robomonk's Bootcamps cover a variety of fields, enabling learners
-              to dive into diverse topics, including:
+              Robomonk&apos;s Bootcamps cover a variety of fields, enabling
+              learners to dive into diverse topics, including:
             </p>
 
             <div className={styles.offeringsGrid}>

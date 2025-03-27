@@ -23,7 +23,7 @@ const K12CTA = () => {
             marginBottom: "1.5rem",
           }}
         >
-          Ready to Begin Your Child's Learning Journey?
+          {`Ready to Begin Your Child's Learning Journey?`}
         </h2>
         <p
           style={{

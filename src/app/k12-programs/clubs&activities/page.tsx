@@ -10,7 +10,7 @@ const ClubsAndActivitiesPage = () => {
       icon: "🌐",
       title: "Offline & Online Options",
       description:
-        "Flexibility to choose between in-person or virtual clubs based on your institution's needs.",
+        "Flexibility to choose between in-person or virtual clubs based on your institution&apos;s needs.",
     },
     {
       icon: "👨‍🏫",
@@ -189,12 +189,12 @@ const ClubsAndActivitiesPage = () => {
           <div className="container">
             <h2 className={styles.sectionTitle}>Where We Offer</h2>
             <p className={styles.sectionText}>
-              We partner with schools, institutions, and colleges to establish
+              {`We partner with schools, institutions, and colleges to establish
               and maintain clubs and activities based on their unique needs. Our
               flexible approach allows us to collaborate with educational
               institutions in various ways, whether it's a full-fledged club or
               a one-time event, ensuring that we align with the specific
-              requirements of each institution.
+              requirements of each institution.`}
             </p>
 
             <div className={styles.partnersContainer}>
@@ -248,9 +248,9 @@ const ClubsAndActivitiesPage = () => {
 
             <div className={styles.conclusion}>
               <p>
-                Robomonk's approach focuses on engaging students with hands-on
-                experiences, ensuring that learning is not only informative but
-                also fun and meaningful.
+                Robomonk&apos;s approach focuses on engaging students with
+                hands-on experiences, ensuring that learning is not only
+                informative but also fun and meaningful.
               </p>
               <div className={styles.ctaContainer}>
                 <button className="btn-primary">

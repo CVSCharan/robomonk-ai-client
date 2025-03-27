@@ -56,7 +56,7 @@ const K12EMCC = () => {
             <h2
               className={`section-title gradient-text ${styles.sectionTitle}`}
             >
-              RoboMonk's E.M.C.C Methodology
+              {`RoboMonk's E.M.C.C Methodology`}
             </h2>
             <p className={styles.emccIntro}>
               At RoboMonk, our E.M.C.C methodology is designed to foster

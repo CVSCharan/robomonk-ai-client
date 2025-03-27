@@ -105,8 +105,8 @@ const K12GetInTouch = () => {
               Get in Touch
             </h2>
             <p className={styles.contactIntro}>
-              Have questions or ready to start? Our team is here to help you
-              navigate your child's educational journey.
+              {`Have questions or ready to start? Our team is here to help you
+              navigate your child's educational journey.`}
             </p>
 
             <div className={styles.contactGrid}>
@@ -138,7 +138,9 @@ const K12GetInTouch = () => {
                       rel="noopener noreferrer"
                       aria-label="Instagram"
                     >
-                      <Instagram className={`${styles.socialIcon} ${styles.blackIcon}`} />
+                      <Instagram
+                        className={`${styles.socialIcon} ${styles.blackIcon}`}
+                      />
                     </a>
                     <a
                       href="https://wa.me/qr/K5ILKPFNLG76J1"
@@ -146,7 +148,9 @@ const K12GetInTouch = () => {
                       rel="noopener noreferrer"
                       aria-label="WhatsApp"
                     >
-                      <WhatsAppIcon className={`${styles.socialIcon} ${styles.blackIcon}`} />
+                      <WhatsAppIcon
+                        className={`${styles.socialIcon} ${styles.blackIcon}`}
+                      />
                     </a>
                     <a
                       href="https://www.threads.net/@robomonk.ai?invite=0"
@@ -169,7 +173,9 @@ const K12GetInTouch = () => {
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
                     >
-                      <LinkedInIcon className={`${styles.socialIcon} ${styles.blackIcon}`} />
+                      <LinkedInIcon
+                        className={`${styles.socialIcon} ${styles.blackIcon}`}
+                      />
                     </a>
                   </div>
                 </div>
